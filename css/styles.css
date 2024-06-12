@@ -147,31 +147,28 @@
             font-weight: bold;
         }
     .grid {
-        display: flex;
-        justify-content: space-around;
-        margin: 40px 20px;
-    }
-    .grid-item {
-        text-align: center;
-        width: 30%;
-    }
-    .grid-item img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-    }
-    .grid-item .description {
-        margin-top: 10px;
-        font-size: 18px;
-        color: black;
-        font-weight: bold;
-    }
-    .grid-item .additional-text {
-        margin-top: 20px;
-        font-size: 16px;
-        color: black;
-        text-align: center;
-    }
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+        .grid-item {
+            min-width: 33.33%;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+        }
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        .description {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 3s ease-in-out;
+        }
     .slider {
         position: relative;
         height: 70%;
