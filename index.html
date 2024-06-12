@@ -37,24 +37,45 @@
     <section class="purpose">
         Our Purpose
     </section>
-    <section class="grid">
-        <div class="grid-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwRjDj7Kneu2QW5M5ExSCfod9AnYi6Y8eMsdoZqTc8a9OONfaigtyvgVgorBaSYbkrg&usqp=CAU" alt="Image 1">
-            <div class="description">Informed Users</div>
-            <div class="additional-text">Manage all your accounts seamlessly in one place.</div>
-        </div>
-        <div class="grid-item">
-            <img src="https://www.shutterstock.com/image-vector/report-chart-business-finance-color-260nw-1537831532.jpg" alt="Image 2">
-            <div class="description">Unlock full Potential</div>
-            <div class="additional-text">Make it all count</div>
-        </div>
-        <div class="grid-item">
-            <img src="https://images.squarespace-cdn.com/content/v1/5df03be21a81e867cdce54bb/61449aa8-5e53-4df9-afdf-984f1ace8976/WEB_Training.png" alt="Image 3">
-            <div class="description">Simple and Fun</div>
-            <div class="additional-text">No one likes to work.</div>
-
+   <section class="grid">
+        <div class="carousel">
+            <div class="grid-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwRjDj7Kneu2QW5M5ExSCfod9AnYi6Y8eMsdoZqTc8a9OONfaigtyvgVgorBaSYbkrg&usqp=CAU" alt="Image 1">
+                <div class="description">Informed Users</div>
+                <div class="additional-text">Manage all your accounts seamlessly in one place.</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://www.shutterstock.com/image-vector/report-chart-business-finance-color-260nw-1537831532.jpg" alt="Image 2">
+                <div class="description">Unlock full Potential</div>
+                <div class="additional-text">Make it all count</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://images.squarespace-cdn.com/content/v1/5df03be21a81e867cdce54bb/61449aa8-5e53-4df9-afdf-984f1ace8976/WEB_Training.png" alt="Image 3">
+                <div class="description">Simple and Fun</div>
+                <div class="additional-text">No one likes to work.</div>
+            </div>
         </div>
     </section>
+    <script>
+        let currentIndex = 0;
+        const carousel = document.querySelector('.carousel');
+        const totalItems = document.querySelectorAll('.grid-item').length;
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            carousel.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+            
+            if (currentIndex === 0) {
+                setTimeout(() => {
+                    carousel.style.transition = 'none';
+                    carousel.style.transform = 'translateX(0)';
+                    currentIndex = 0;
+                    setTimeout(() => {
+                        carousel.style.transition = 'transform 1s ease-in-out';
+                    }, 50);
+                }, 950);
+            }
+        }, 1000);
     <section class="slider">
         <div class="slides">
             <div class="slide">
