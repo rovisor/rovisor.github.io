@@ -146,7 +146,7 @@
             font-size: 28px;
             font-weight: bold;
         }
-    .carousel-container {
+        .carousel-container {
             width: 100vw; /* Full width of the viewport */
             overflow: hidden; /* Hide overflow */
             position: relative;
@@ -399,6 +399,7 @@
 
 .footer-bottom p {
     margin: 0;
+}
 }
 body {
   margin: 0;
