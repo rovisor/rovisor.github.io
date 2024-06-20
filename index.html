@@ -24,70 +24,206 @@
 <header class="header1">
         <div class="logo">Rovisor Research</div>
         <nav class="nav">
-            <a href="rovisor-moments.html">Rovisor Moments</a>
-            <a href="rovisor-unify.html">Rovisor Unify</a>
-            <a href="about.html">About</a>
+            <a href="rovisor-moments.html" target="blank">Rovisor Moments</a>
+            <a href="rovisor-unify.html" target="blank">Rovisor Unify</a>
+            <a href="rovisor-aboutus.html" target="blank">About US</a>
         </nav>
     </header>
     <section class="cover1">
-        <img src="https://media.istockphoto.com/id/1346611118/vector/scene-with-business-people-working-in-the-office.jpg?s=612x612&w=0&k=20&c=NH5XYaUYJan2QuqR6zHC0AFT8D29Cd6ynMqxExPm4kA=" alt="Cover Photo">
+        <img src="https://s3-alpha-sig.figma.com/img/df56/31c8/31bdd167d61a9ed285ee6e1529827ce0?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=No7YsMwX7qirjvsy4wQXkR2~7iJiYnrK3LysQSRt4u~q95QXHOC5DogrsrQCHfgC7Hg83tvDMqdaaN8VRLZ6572BLrglNNxKHe7DNe9nxjrh5TWg~8dhUZC4Lx0oj~bd1kIZE0Qmn2ppYL8sQ0tZVS3uCFLuvncNyb6qFIV2xBipvWHnDM4lAkzbLox-H9s-bs5qe3OwmjsOJ8StqcpObMR5pYs4fe1VwVdqjhQf1JATcHW54gEkjX57uwBJvsZVaohEyNFLwY6apZj5VNceAsmjgY55Pv8h4vhGUZ6s44KIPaRhBuRrnXyDanQUJE1NcASd11AnvocjpCP~LWSilQ__" alt="Cover Photo">
         <div class="text">We aim to build a financial woke community by empowering the users with every step they take in their financial journey.</div>
     </section>
-    <div class="description-text">
-        An AI based fintech company revolutionizing the way individuals approach their financial decisions making. Inspired by Robert Kiyosaki's concept of 'make your money work for you', Rovisor Research brings empowering solution for that to turn into reality in the form of Rovisor Moments, your own personal AI accountant. At Rovisor Research we aim at making financial management so simple that anyone can do it.
-    </div>
-    <section class="rovisor-moments-head">
-        Rovisor Moments
+    <section class="purpose">
+        Our Purpose
     </section>
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- Original items -->
+            <div class="grid-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwRjDj7Kneu2QW5M5ExSCfod9AnYi6Y8eMsdoZqTc8a9OONfaigtyvgVgorBaSYbkrg&usqp=CAU" alt="Image 1">
+                <div class="description">Informed Users</div>
+                <div class="additional-text">Manage all your accounts seamlessly in one place.</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://www.shutterstock.com/image-vector/report-chart-business-finance-color-260nw-1537831532.jpg" alt="Image 2">
+                <div class="description">Unlock full Potential</div>
+                <div class="additional-text">Make it all count</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://images.squarespace-cdn.com/content/v1/5df03be21a81e867cdce54bb/61449aa8-5e53-4df9-afdf-984f1ace8976/WEB_Training.png" alt="Image 3">
+                <div class="description">Simple and Fun</div>
+                <div class="additional-text">No one likes to work.</div>
+            </div>
+            <!-- Cloned items to make the carousel seamless -->
+            <div class="grid-item clone">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwRjDj7Kneu2QW5M5ExSCfod9AnYi6Y8eMsdoZqTc8a9OONfaigtyvgVgorBaSYbkrg&usqp=CAU" alt="Image 1">
+                <div class="description">Informed Users</div>
+                <div class="additional-text">Manage all your accounts seamlessly in one place.</div>
+            </div>
+            <div class="grid-item clone">
+                <img src="https://www.shutterstock.com/image-vector/report-chart-business-finance-color-260nw-1537831532.jpg" alt="Image 2">
+                <div class="description">Unlock full Potential</div>
+                <div class="additional-text">Make it all count</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const carousel = document.querySelector('.carousel');
+        const items = document.querySelectorAll('.grid-item');
+        const totalItems = items.length;
+
+        function slideCarousel() {
+            currentIndex++;
+            carousel.style.transform = `translateX(-${currentIndex * 100 / 3}vw)`; // Move 1/3 of the viewport width each time
+            
+            // Reset the index for a smooth loop
+            if (currentIndex === totalItems - 3) {
+                setTimeout(() => {
+                    carousel.style.transition = 'none';
+                    currentIndex = 0;
+                    carousel.style.transform = 'translateX(0)';
+                    setTimeout(() => {
+                        carousel.style.transition = 'transform 1s ease-in-out';
+                    }, 50);
+                }, 950); // This should match the transition duration
+            }
+        }
+
+        setInterval(slideCarousel, 3000);
+    </script>
+    <section class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="https://st2.depositphotos.com/3907761/11588/v/450/depositphotos_115880728-stock-illustration-brain-vector-icon.jpg" alt="Logo 1">
+                <div class="slide-description">AI driven decision supports model - Let AI do your homework.</div>
+            </div>
+            <div class="slide">
+                <img src="logo2.png" alt="Logo 2">
+                <div class="slide-description">Description for Slide 2</div>
+            </div>
+            <div class="slide">
+                <img src="logo3.png" alt="Logo 3">
+                <div class="slide-description">Description for Slide 3</div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-control" onclick="prevSlide()">&#10094;</button>
+            <button class="slider-control" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelector('.slides');
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+        function showSlide(index) {
+            const newTransform = -index * 100 / totalSlides;
+            slides.style.transform = `translateX(${newTransform}%)`;
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            showSlide(slideIndex);
+        }
+
+        function prevSlide() {
+            slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+            showSlide(slideIndex);
+        }
+    </script>
+    <div class="image-content">
+        <img src="https://img.freepik.com/premium-vector/abstract-blue-smooth-wave-white-background-dynamic-sound-wave-design-element-vector-illustration_634443-690.jpg" alt="Additional Image">
+    </div>
+    <section class="text-box-container">
+        <div class="text-box">
+            Start your journey and learn with Rovisor
+        </div>
+    </section>
+    <section class="rovisor-unify">
+        Rovisor Unify
+    </section>
+    <section class="text-line">
+        <p>Experience seamless financial management with Rovisor Unify. Streamline your accounts and access advanced financial insights.</p>
+    </section> 
+    <section class="components-section">
+        <div class="component">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwRjDj7Kneu2QW5M5ExSCfod9AnYi6Y8eMsdoZqTc8a9OONfaigtyvgVgorBaSYbkrg&usqp=CAU" alt="Component Logo 1">
+            <div class="description">Steamlined Account Management</div>
+            <div class="additional-text">Manage all your accounts seamlessly in one place.</div>
+        </div>
+        <div class="component">
+            <img src="https://www.shutterstock.com/image-vector/report-chart-business-finance-color-260nw-1537831532.jpg" alt="Component Logo 2">
+            <div class="description">Just-in-Time Alerts</div>
+            <div class="additional-text">Receive timely alerts for important financial activities.</div>
+        </div>
+        <div class="component">
+            <img src="https://images.squarespace-cdn.com/content/v1/5df03be21a81e867cdce54bb/61449aa8-5e53-4df9-afdf-984f1ace8976/WEB_Training.png" alt="Component Logo 3">
+            <div class="description">AI Decision-Making Models</div>
+            <div class="additional-text">Utilize AI-driven models for informed decision-making.</div>
+        </div>
     </section>
     <section class="rovisor-moments">
-        <div class="rovisor-moments-content">
-            <div class="text-section">
-                <p>Empower Your Financial Journey with Rovisor Moments. Discover a range of features designed to simplify and enhance your financial management.</p>
-            </div>
-            <div class="image-section">
-                <img src="path/to/robot-image.png" alt="Robot">
-            </div>
+        Rovisor Moments
+    </section>
+    <section class="text-line">
+        <p>Empower Your Financial Journey with Rovisor Moments. Discover a range of features designed to simplify and enhance your financial management.</p>
+    </section> 
+    <section class="components-section">
+        <div class="component">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwRjDj7Kneu2QW5M5ExSCfod9AnYi6Y8eMsdoZqTc8a9OONfaigtyvgVgorBaSYbkrg&usqp=CAU" alt="Component Logo 1">
+            <div class="description">Steamlined Account Management</div>
+            <div class="additional-text">Manage all your accounts seamlessly in one place.</div>
         </div>
-        
-        <div class="features">
-            <div class="feature">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwRjDj7Kneu2QW5M5ExSCfod9AnYi6Y8eMsdoZqTc8a9OONfaigtyvgVgorBaSYbkrg&usqp=CAU" alt="Streamlined Account Management">
-                <p>Streamlined Account Management</p>
-            </div>
-            <div class="feature">
-                <img src="https://www.shutterstock.com/image-vector/report-chart-business-finance-color-260nw-1537831532.jpg" alt="Just-in-Time Alerts">
-                <p>Just-in-Time Alerts</p>
-            </div>
-            <div class="feature">
-                <img src="https://images.squarespace-cdn.com/content/v1/5df03be21a81e867cdce54bb/61449aa8-5e53-4df9-afdf-984f1ace8976/WEB_Training.png" alt="AI Decision-Making">
-                <p>AI Decision-Making</p>
-            </div>
+        <div class="component">
+            <img src="https://www.shutterstock.com/image-vector/report-chart-business-finance-color-260nw-1537831532.jpg" alt="Component Logo 2">
+            <div class="description">Just-in-Time Alerts</div>
+            <div class="additional-text">Receive timely alerts for important financial activities.</div>
+        </div>
+        <div class="component">
+            <img src="https://images.squarespace-cdn.com/content/v1/5df03be21a81e867cdce54bb/61449aa8-5e53-4df9-afdf-984f1ace8976/WEB_Training.png" alt="Component Logo 3">
+            <div class="description">AI Decision-Making Models</div>
+            <div class="additional-text">Utilize AI-driven models for informed decision-making.</div>
         </div>
     </section>
+    
+    <div class="about-section">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>
+                At Rovisor Research, we believe that financial empowerment begins with knowledge. Our goal is to educate and inspire our users, building a community of financially woke individuals who are empowered to take control of their financial future. The state-of-the-art AI Bot understands your cashflow and optimizes the way you manage your funds.
+            </p>
+            <div class="coming-soon">
+                Coming soon...
+            </div>
+        </div>
+        <div class="curve">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#6ea7b0" fill-opacity="1" d="M0,192L1440,160L1440,320L0,320Z"></path>
+            </svg>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-about">
+            <h2>About Rovisor Research</h2>
+            <p>Rovisor Research is an AI-first company building smart and easy solutions for finance problems.</p>
+        </div>
+        <div class="footer-contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:info@rovisor.in">info@rovisor.in</a></p>
+            <p>Twitter: <a href="https://twitter.com/Rovisor" target="_blank">@Rovisor</a></p>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/rovisor.moments/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/rovisor-research/about/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/rovisor_in" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/rovisor.moments/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://discord.com/channels/1147578991826448424/1147578992279429142" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/08574c99a3.js" crossorigin="anonymous"></script>  
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-section about">
-            <h3>About Rovisor Research</h3>
-            <p>Rovisor Research is an AI first company building smart and easy solutions for finance problems</p>
-        </div>
-        <div class="footer-section contact">
-            <h3>Contact Us</h3>
-            <p>info@rovisor.in</p>
-            <p>@Rovisor</p>
-        </div>
-        <div class="footer-section web">
-            <h3>Around the Web</h3>
-            <a href="https://github.com"><img src="https://example.com/path/to/github-logo.png" alt="GitHub"></a>
-            <a href="https://twitter.com"><img src="https://example.com/path/to/twitter-logo.png" alt="Twitter"></a>
-            <a href="https://linkedin.com"><img src="https://example.com/path/to/linkedin-logo.png" alt="LinkedIn"></a>
-            <a href="https://instagram.com"><img src="https://example.com/path/to/instagram-logo.png" alt="Instagram"></a>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2024 Rovisor Research. All rights reserved.</p>
-        </div>
-    </footer>
     </nav>
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">
